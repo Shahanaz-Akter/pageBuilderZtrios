@@ -1408,11 +1408,8 @@
 
 		<script id="vvveb-property" type="text/html">
 			<div class="mb-3 {% if (typeof col !== 'undefined' && col != false) { %} col-sm-{%=col%} {% } else { %}row{% } %} {% if (typeof inline !== 'undefined' && inline == true) { %}inline{% } %} " data-key="{%=key%}" {% if (typeof group !== 'undefined' && group != null) { %}data-group="{%=group%}" {% } %}>
-
 				{% if (typeof name !== 'undefined' && name != false) { %}<label class="{% if (typeof inline === 'undefined' ) { %}col-sm-4{% } %} form-label" for="input-model">{%=name%}</label>{% } %}
-
 				<div class="{% if (typeof inline === 'undefined') { %}col-sm-{% if (typeof name !== 'undefined' && name != false) { %}8{% } else { %}12{% } } %} input"></div>
-
 			</div>
 		</script>
 
@@ -1752,8 +1749,8 @@ Unzip the latest ckeditor release zip from https://github.com/ckeditor/ckeditor4
 			let deleteUrl = 'save.php?action=delete';
 
 			let pages = [{
-				name: "Life is a party",
-				title: "Life is a party",
+				name: "Life is a Destination",
+				title: "Life is a Destination",
 				url: "demo/temp1/party.html",
 				file: "demo/temp1/party.html",
 				assets: ['demo/temp1/party.css']
