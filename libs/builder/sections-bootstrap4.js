@@ -16,9 +16,12 @@ limitations under the License.
 https://github.com/givanz/Vvvebjs
 */
 
+
+// Bootstrap Component
 Vvveb.SectionsGroup['Bootstrap'] =
   ["bootstrap4/signin-split", "bootstrap4/image-gallery", "bootstrap4/video-header", "bootstrap4/slider-header", "bootstrap4/about-team", "bootstrap4/portfolio-one-column", "bootstrap4/portfolio-two-column", "bootstrap4/portfolio-three-column", "bootstrap4/portfolio-four-column"];
 
+// Bootstrap Components section1
 
 Vvveb.Sections.add("bootstrap4/signin-split", {
   name: "Modern Sign In Page with Split Screen Format",
@@ -147,7 +150,7 @@ Vvveb.Sections.add("bootstrap4/signin-split", {
 </section>
 `,
 });
-
+// Bootstrap Components section2
 Vvveb.Sections.add("bootstrap4/image-gallery", {
   name: "Image gallery",
   image: "https://assets.startbootstrap.com/img/screenshots/snippets/thumbnail-gallery.jpg",
@@ -228,7 +231,7 @@ Vvveb.Sections.add("bootstrap4/image-gallery", {
 </section>
 `,
 });
-
+// continue
 Vvveb.Sections.add("bootstrap4/slider-header", {
   name: "Image Slider Header",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/product.png">',

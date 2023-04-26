@@ -411,8 +411,8 @@ Vvveb.Sections.add("bootstrap4/form_2", {
   left: auto;
   right: 5px;
 }
-</style>
 
+</style>
 
 <section class="form2">
 
@@ -480,9 +480,9 @@ Vvveb.Sections.add("bootstrap4/form_2", {
  
 
  //jQuery time
- var current_fs, next_fs, previous_fs; //fieldsets
- var left, opacity, scale; //fieldset properties which we will animate
- var animating; //flag to prevent quick multi-click glitches
+ let current_fs, next_fs, previous_fs; //fieldsets
+ let left, opacity, scale; //fieldset properties which we will animate
+ let animating; //flag to prevent quick multi-click glitches
  
  $(".next").click(function(){
    if(animating) return false;
@@ -568,8 +568,6 @@ Vvveb.Sections.add("bootstrap4/form_2", {
 
 
 
-
-
 Vvveb.Sections.add("bootstrap4/form_3", {
   name: "Form3 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
@@ -577,86 +575,86 @@ Vvveb.Sections.add("bootstrap4/form_3", {
   html: `
 
 <section>
-      <div class="form_3">
-     
-        <div class="row">
-      <div class="col-md-12">
-        <form action="index.html" method="post">
-          <h1> Sign Up </h1>
-          
-          <fieldset>
-            
-            <legend><span class="number">1</span> Your Basic Info</legend>
-          
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name">
-          
-            <label for="email">Email:</label>
-            <input type="email" id="mail" name="user_email">
-         
-            <label for="password">Password:</label>
-            <input type="password" id="password"       name="user_password">
-          
-            <label>Age:</label>
-            <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
-            <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Over 13</label>
-            
+<div class="form_3">
+
+<div class="row">
+<div class="col-md-12">
+<form action="index.html" method="post">
+<h1> Sign Up </h1>
+
+<fieldset>
+
+<legend><span class="number">1</span> Your Basic Info</legend>
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="user_name">
+
+<label for="email">Email:</label>
+<input type="email" id="mail" name="user_email">
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="user_password">
+
+  <label>Age:</label>
+  <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+    <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Over 13</label>
+
+    </fieldset>
+    <fieldset>
+
+      <legend><span class="number">2</span> Your Profile</legend>
+
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="user_bio"></textarea>
+
+
+      <label for="job">Job Role:</label>
+      <select id="job" name="user_job">
+        <optgroup label="Web">
+          <option value="frontend_developer">Front-End Developer</option>
+          <option value="php_developer">PHP Developer</option>
+          <option value="python_developer">Python Developer</option>
+          <option value="rails_developer">Rails Developer</option>
+          <option value="web_designer">Web Designer</option>
+          <option value="wordpress_developer">Wordpress Developer</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="android_developer">Android Developer</option>
+          <option value="ios_developer">IOS Developer</option>
+          <option value="mobile_designer">Mobile Designer</option>
+        </optgroup>
+        <optgroup label="Business">
+          <option value="business_owner">Business Owner</option>
+          <option value="freelancer">Freelancer</option>
+        </optgroup>
+      </select>
+
+      <label>Interests:</label>
+      <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+        <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+          <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+
           </fieldset>
-          <fieldset>  
-          
-            <legend><span class="number">2</span> Your Profile</legend>
-            
-           <label for="bio">Bio:</label>
-            <textarea id="bio" name="user_bio"></textarea>
-          
-          
-           <label for="job">Job Role:</label>
-            <select id="job" name="user_job">
-              <optgroup label="Web">
-                <option value="frontend_developer">Front-End Developer</option>
-                <option value="php_developer">PHP Developer</option>
-                <option value="python_developer">Python Developer</option>
-                <option value="rails_developer">Rails Developer</option>
-                <option value="web_designer">Web Designer</option>
-                <option value="wordpress_developer">Wordpress Developer</option>
-              </optgroup>
-              <optgroup label="Mobile">
-                <option value="android_developer">Android Developer</option>
-                <option value="ios_developer">IOS Developer</option>
-                <option value="mobile_designer">Mobile Designer</option>
-              </optgroup>
-              <optgroup label="Business">
-                <option value="business_owner">Business Owner</option>
-                <option value="freelancer">Freelancer</option>
-              </optgroup>
-            </select>
-            
-            <label>Interests:</label>
-            <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
-            <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
-            <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
-            
-           </fieldset>
-         
+
           <button type="submit">Sign Up</button>
-          
-         </form>
-          </div>
+
+        </form>
         </div>
-          <style>    
+      </div>
+        <style>
           .form_3 form {
-            max-width: 300px;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background: #f4f7f8;
-            border-radius: 8px;
-          }
-          
+            max - width: 300px;
+          margin: 10px auto;
+          padding: 10px 20px;
+          background: #f4f7f8;
+          border-radius: 8px;
+}
+
           .form_3 h1 {
             margin: 0 0 30px 0;
-            text-align: center;
-          }
-          
+          text-align: center;
+}
+
           .form_3 input[type="text"],
           .form_3 input[type="password"],
           .form_3 input[type="date"],
@@ -670,94 +668,94 @@ Vvveb.Sections.add("bootstrap4/form_3", {
           .form_3  textarea,
           .form_3 select {
             background: rgba(255,255,255,0.1);
-            border: none;
-            font-size: 16px;
-            height: auto;
-            margin: 0;
-            outline: 0;
-            padding: 15px;
-            width: 100%;
-            background-color: #e8eeef;
-            color: #8a97a0;
-            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-            margin-bottom: 30px;
-          }
-          
+          border: none;
+          font-size: 16px;
+          height: auto;
+          margin: 0;
+          outline: 0;
+          padding: 15px;
+          width: 100%;
+          background-color: #e8eeef;
+          color: #8a97a0;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+          margin-bottom: 30px;
+}
+
           .form_3 input[type="radio"],
           .form_3 input[type="checkbox"] {
             margin: 0 4px 8px 0;
-          }
-          
+}
+
           .form_3 select {
             padding: 6px;
-            height: 32px;
-            border-radius: 2px;
-          }
-          
+          height: 32px;
+          border-radius: 2px;
+}
+
           .form_3 button {
             padding: 19px 39px 18px 39px;
-            color: #FFF;
-            background-color: #4bc970;
-            font-size: 18px;
-            text-align: center;
-            font-style: normal;
-            border-radius: 5px;
-            width: 100%;
-            border: 1px solid #3ac162;
-            border-width: 1px 1px 3px;
-            box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-            margin-bottom: 10px;
-          }
-          
+          color: #FFF;
+          background-color: #4bc970;
+          font-size: 18px;
+          text-align: center;
+          font-style: normal;
+          border-radius: 5px;
+          width: 100%;
+          border: 1px solid #3ac162;
+          border-width: 1px 1px 3px;
+          box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+          margin-bottom: 10px;
+}
+
           .form_3 fieldset {
-            margin-bottom: 30px;
-            border: none;
-          }
-          
+            margin - bottom: 30px;
+          border: none;
+}
+
           .form_3 legend {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-          }
-          
+            font - size: 1.4em;
+          margin-bottom: 10px;
+}
+
           .form_3 label {
             display: block;
-            margin-bottom: 8px;
-          }
-          
-          .form_3 label.light {
-            font-weight: 300;
-            display: inline;
-          }
-          
-          .form_3 .number {
-            background-color: #5fcf80;
-            color: #fff;
-            height: 30px;
-            width: 30px;
-            display: inline-block;
-            font-size: 0.8em;
-            margin-right: 4px;
-            line-height: 30px;
-            text-align: center;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-            border-radius: 100%;
-          }
-          
-          @media screen and (min-width: 480px) {
-          
-            .form_3 form {
-              max-width: 480px;
-            }
-          
-          }
-          
-          </style>
+          margin-bottom: 8px;
+}
 
-          <script id="form_3_script"></script>
+          .form_3 label.light {
+            font - weight: 300;
+          display: inline;
+}
+
+          .form_3 .number {
+            background - color: #5fcf80;
+          color: #fff;
+          height: 30px;
+          width: 30px;
+          display: inline-block;
+          font-size: 0.8em;
+          margin-right: 4px;
+          line-height: 30px;
+          text-align: center;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+          border-radius: 100%;
+}
+
+          @media screen and (min-width: 480px) {
+
+.form_3 form {
+            max - width: 480px;
+}
+
+}
+
+        </style>
+
+        <script id="form_3_script"></script>
 
       </div>
-</section>
-  `
+    </section>
+    `
 });
 
 
@@ -771,486 +769,436 @@ Vvveb.Sections.add("bootstrap4/form_4", {
 
 
 
-  <style>
-  :root {
-    /* COLORS */
-    --white: #e9e9e9;
-    --gray: #333;
-    --blue: #0367a6;
-    --lightblue: #008997;
-  
-    /* RADII */
-    --button-radius: 0.7rem;
-  
-    /* SIZES */
-    --max-width: 758px;
-    --max-height: 420px;
-  
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-  
- 
-  
-  .form_4 .form__title {
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 1.25rem;
-  }
-  
-  .form_4.form_4 .link {
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin: 1.5rem 0;
-    text-decoration: none;
-  }
-  
-  .form_4.form_4 .container {
-    background-color: var(--white);
-    border-radius: var(--button-radius);
-    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
-      0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
-    height: var(--max-height);
-    max-width: var(--max-width);
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  
- .form_4.form_4  .container__form {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    transition: all 0.6s ease-in-out;
-  }
-  
-  .container--signin {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-  }
-  
-  .container.right-panel-active .container--signin {
-    transform: translateX(100%);
-  }
-  
-  .container--signup {
-    left: 0;
+<style>
+:root {
+  /* COLORS */
+  --white: #e9e9e9;
+--gray: #333;
+--blue: #0367a6;
+--lightblue: #008997;
+
+/* RADII */
+--button-radius: 0.7rem;
+
+/* SIZES */
+--max-width: 758px;
+--max-height: 420px;
+
+font-size: 16px;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.form_4 .form__title {
+  font - weight: 300;
+margin: 0;
+margin-bottom: 1.25rem;
+}
+
+.form_4.form_4 .link {
+  color: let(--gray);
+font-size: 0.9rem;
+margin: 1.5rem 0;
+text-decoration: none;
+}
+
+.form_4.form_4 .container {
+  background - color: let(--white);
+border-radius: let(--button-radius);
+box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+height: let(--max-height);
+max-width: let(--max-width);
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+
+.form_4.form_4  .container__form {
+  height: 100%;
+position: absolute;
+top: 0;
+transition: all 0.6s ease-in-out;
+}
+
+.container--signin {
+  left: 0;
+width: 50%;
+z-index: 2;
+}
+
+.container.right-panel-active .container--signin {
+  transform: translateX(100%);
+}
+
+.container--signup {
+  left: 0;
+opacity: 0;
+width: 50%;
+z-index: 1;
+}
+
+.container.right-panel-active .container--signup {
+  animation: show 0.6s;
+opacity: 1;
+transform: translateX(100%);
+z-index: 5;
+}
+
+.container__overlay {
+  height: 100%;
+left: 50%;
+overflow: hidden;
+position: absolute;
+top: 0;
+transition: transform 0.6s ease-in-out;
+width: 50%;
+z-index: 100;
+}
+
+.container.right-panel-active .container__overlay {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background - color: let(--lightblue);
+background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+left: -100%;
+position: relative;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+width: 200%;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.form_4.form_4  .overlay__panel {
+  align - items: center;
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: center;
+position: absolute;
+text-align: center;
+top: 0;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+width: 50%;
+}
+
+.form_4.form_4 .overlay--left {
+  transform: translateX(-20%);
+}
+
+.form_4 .container.right-panel-active .overlay--left {
+  transform: translateX(0);
+}
+
+.form_4 .overlay--right {
+  right: 0;
+transform: translateX(0);
+}
+
+.form_4 .container.right-panel-active .overlay--right {
+  transform: translateX(20%);
+}
+
+.form_4 .btn {
+  background - color: let(--blue);
+background-image: linear-gradient(90deg, let(--blue) 0%, let(--lightblue) 74%);
+border-radius: 20px;
+border: 1px solid let(--blue);
+color: let(--white);
+cursor: pointer;
+font-size: 0.8rem;
+font-weight: bold;
+letter-spacing: 0.1rem;
+padding: 0.9rem 4rem;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
+}
+
+.form_4 .form > .btn {
+  margin - top: 1.5rem;
+}
+
+.form_4 .btn:active {
+  transform: scale(0.95);
+}
+
+.form_4 .btn:focus {
+  outline: none;
+}
+
+.form_4 .form {
+  background - color: let(--white);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 3rem;
+height: 100%;
+text-align: center;
+}
+
+.form_4 .input {
+  background - color: #fff;
+border: none;
+padding: 0.9rem 0.9rem;
+margin: 0.5rem 0;
+width: 100%;
+}
+
+@keyframes show {
+  0 %,
+  49.99 % {
     opacity: 0;
-    width: 50%;
-    z-index: 1;
-  }
-  
-  .container.right-panel-active .container--signup {
-    animation: show 0.6s;
-    opacity: 1;
-    transform: translateX(100%);
-    z-index: 5;
-  }
-  
-  .container__overlay {
-    height: 100%;
-    left: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    transition: transform 0.6s ease-in-out;
-    width: 50%;
-    z-index: 100;
-  }
-  
-  .container.right-panel-active .container__overlay {
-    transform: translateX(-100%);
-  }
-  
-  .overlay {
-    background-color: var(--lightblue);
-    background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    left: -100%;
-    position: relative;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-    width: 200%;
-  }
-  
-  .container.right-panel-active .overlay {
-    transform: translateX(50%);
-  }
-  
- .form_4.form_4  .overlay__panel {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-    width: 50%;
-  }
-  
-  .form_4.form_4 .overlay--left {
-    transform: translateX(-20%);
-  }
-  
-  .form_4 .container.right-panel-active .overlay--left {
-    transform: translateX(0);
-  }
-  
-  .form_4 .overlay--right {
-    right: 0;
-    transform: translateX(0);
-  }
-  
-  .form_4 .container.right-panel-active .overlay--right {
-    transform: translateX(20%);
-  }
-  
-  .form_4 .btn {
-    background-color: var(--blue);
-    background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
-    border-radius: 20px;
-    border: 1px solid var(--blue);
-    color: var(--white);
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    padding: 0.9rem 4rem;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
-  
-  .form_4 .form > .btn {
-    margin-top: 1.5rem;
-  }
-  
-  .form_4 .btn:active {
-    transform: scale(0.95);
-  }
-  
-  .form_4 .btn:focus {
-    outline: none;
-  }
-  
-  .form_4 .form {
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 3rem;
-    height: 100%;
-    text-align: center;
-  }
-  
-  .form_4 .input {
-    background-color: #fff;
-    border: none;
-    padding: 0.9rem 0.9rem;
-    margin: 0.5rem 0;
-    width: 100%;
-  }
-  
-  @keyframes show {
-    0%,
-    49.99% {
-      opacity: 0;
-      z-index: 1;
-    }
-  
-    50%,
-    100% {
-      opacity: 1;
-      z-index: 5;
-    }
-  }
-  .form_4{
-    
-  }
-  
-  </style>
+    z- index: 1;
+}
+
+50%,
+100% {
+  opacity: 1;
+z-index: 5;
+}
+}
+.form_4{
+}
+</style>
 
 
-  <section>
-  <div class="form_4">
+<section>
+<div class="form_4">
 
   <div class="container">
-	<!-- Sign Up -->
-	<div class="container__form container--signup">
-		<form action="#" class="form" id="form1">
-			<h2 class="form__title">Sign Up</h2>
-			<input type="text" placeholder="User" class="input" />
-			<input type="email" placeholder="Email" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-			<button class="btn">Sign Up</button>
-		</form>
-	</div>
+    <!-- Sign Up -->
+    <div class="container__form container--signup">
+      <form action="#" class="form" id="form1">
+        <h2 class="form__title">Sign Up</h2>
+        <input type="text" placeholder="User" class="input" />
+        <input type="email" placeholder="Email" class="input" />
+        <input type="password" placeholder="Password" class="input" />
+        <button class="btn">Sign Up</button>
+      </form>
+    </div>
 
-	<!-- Sign In -->
-	<div class="container__form container--signin">
-		<form action="#" class="form" id="form2">
-			<h2 class="form__title">Sign In</h2>
-			<input type="email" placeholder="Email" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-			<a href="#" class="link">Forgot your password?</a>
-			<button class="btn">Sign In</button>
-		</form>
-	</div>
+    <!-- Sign In -->
+    <div class="container__form container--signin">
+      <form action="#" class="form" id="form2">
+        <h2 class="form__title">Sign In</h2>
+        <input type="email" placeholder="Email" class="input" />
+        <input type="password" placeholder="Password" class="input" />
+        <a href="#" class="link">Forgot your password?</a>
+        <button class="btn">Sign In</button>
+      </form>
+    </div>
 
-	<!-- Overlay -->
-	<div class="container__overlay">
-		<div class="overlay">
-			<div class="overlay__panel overlay--left">
-				<button class="btn" id="signIn">Sign In</button>
-			</div>
-			<div class="overlay__panel overlay--right">
-				<button class="btn" id="signUp">Sign Up</button>
-			</div>
-		</div>
-	</div>
-</div>
+    <!-- Overlay -->
+    <div class="container__overlay">
+      <div class="overlay">
+        <div class="overlay__panel overlay--left">
+          <button class="btn" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay__panel overlay--right">
+          <button class="btn" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-   <script id="form_4_script">
-   
-   const signInBtn = document.getElementById("signIn");
-   const signUpBtn = document.getElementById("signUp");
-   const fistForm = document.getElementById("form1");
-   const secondForm = document.getElementById("form2");
-   const container = document.querySelector(".container");
-   
-   signInBtn.addEventListener("click", () => {
-     container.classList.remove("right-panel-active");
-   });
-   
-   signUpBtn.addEventListener("click", () => {
-     container.classList.add("right-panel-active");
-   });
-   
-   fistForm.addEventListener("submit", (e) => e.preventDefault());
-   secondForm.addEventListener("submit", (e) => e.preventDefault());
-   
+  <script id="form_4_script">
+
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    const fistForm = document.getElementById("form1");
+    const secondForm = document.getElementById("form2");
+    const container = document.querySelector(".container");
+
+signInBtn.addEventListener("click", () => {
+      container.classList.remove("right-panel-active");
+});
+
+signUpBtn.addEventListener("click", () => {
+      container.classList.add("right-panel-active");
+});
+
+fistForm.addEventListener("submit", (e) => e.preventDefault());
+secondForm.addEventListener("submit", (e) => e.preventDefault());
+
   </script>
 
-  </div>
-  </section>
-  `
+</div>
+</section>
+`
 });
 
 
 Vvveb.Sections.add("bootstrap4/form_5", {
   name: "Form5 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/form_5.png",
+  image: "http://localhost/PageBuilderZtrios/img/intro/5.jpg",
   html: `
+<style>
 
- <style>
- body {
-  background: #e9eaea;
-  font-family: roboto;
-  user-select: none;
+
+.wrapper1{
+background: #e9eaea;
+font-family: roboto;
+user-select: none;
 }
 
-.container {
-  width: 450px;
-  margin: 30px auto;
+.container1 {
+width: 450px;
+margin: 30px auto;
 }
 
-.signup,
-.login {
-  width: 50%;
-  background: #fff;
-  float: left;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
+.signup1,
+.login1 {
+width: 50%;
+background: #fff;
+float: left;
+height: 60px;
+line-height: 60px;
+text-align: center;
+cursor: pointer;
+text-transform: uppercase;
 }
 
-.signup-form,
-.login-form {
-  background: #fff;
-  padding: 40px;
-  clear: both;
-  width: 100%;
-  box-sizing: border-box;
-  height: 400px;
+.signup-form1,
+.login-form1 {
+background: #fff;
+padding: 40px;
+clear: both;
+width: 100%;
+box-sizing: border-box;
+height: 400px;
 }
 
-.input {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-  border: 2px solid #e9eaea;
-  color: #3e3e40;
-  font-size: 14px;
-  outline: none;
-  transform: all 0.5s ease;
+.input1 {
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+margin-bottom: 25px;
+border: 2px solid #e9eaea;
+color: #3e3e40;
+font-size: 14px;
+outline: none;
+transform: all 0.5s ease;
 }
 
-.input:focus {
-  border: 2px solid #34b3a0;
+.input1:focus {
+border: 2px solid #34b3a0;
 }
 
-.btn {
-  width: 100%;
-  background: #34b3a0;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-bottom: 30px;
+.btn1 {
+width: 100%;
+background: #34b3a0;
+height: 60px;
+text-align: center;
+line-height: 60px;
+text-transform: uppercase;
+color: #fff;
+font-weight: bold;
+letter-spacing: 1px;
+cursor: pointer;
+margin-bottom: 30px;
 }
 
 span a {
-  text-decoration: none;
-  color: #000;
+text - decoration: none;
+color: #000;
 }
 
 ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #3e3e40;
-  font-family: roboto;
+/* Chrome/Opera/Safari */
+color: #3e3e40;
+font-family: roboto;
 }
 
 ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #3e3e40;
-  font-family: roboto;
+/* Firefox 19+ */
+color: #3e3e40;
+font-family: roboto;
 }
 
 :-ms-input-placeholder {
-  /* IE 10+ */
-  color: #3e3e40;
-  font-family: roboto;
+/* IE 10+ */
+color: #3e3e40;
+font-family: roboto;
 }
 
 :-moz-placeholder {
-  /* Firefox 18- */
-  color: #3e3e40;
-  font-family: roboto;
+/* Firefox 18- */
+color: #3e3e40;
+font-family: roboto;
 }
 
-/* youtube link */
-.youtube {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 160px;
-  text-align: center;
-  padding: 15px 10px;
-  background: #bb0000;
-  border-radius: 5px;
-}
+</style>
 
-.youtube a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
+<section>
+<div class="">
 
- </style>
+<div class="wrapper1" style="border: 2px solid red;">
+<div class="container1">
 
-<section class="parent">
-<div class="form_5">
+<div class="signup1">Sign Up</div>
+<div class="login1">Log In</div>
+
+<div class="signup-form1">
+<input type="text" placeholder="Your Email Address" class="input1"><br />
+<input type="text" placeholder="Choose a Username" class="input1"><br />
+<input type="password" placeholder="Choose a Password" class="input1"><br />
+<div class="btn1">Create account</div>
+</div>
+
+<div class="login-form1">
+<input type="text" placeholder="Email or Username" class="input1"><br />
+<input type="password" placeholder="Password" class="input1"><br />
+<div class="btn1">log in</div>
+<span><a href="#">I forgot my username or password.</a></span>
+</div>
+</div>
+
+<script id="form5_script">
+document.querySelector(".login-form1").style.display = "none";
+document.querySelector(".login1").style.background = "none";
+
+document.querySelector(".login1").addEventListener("click", function() {
+document.querySelector(".signup-form1").style.display = "none";
+document.querySelector(".login-form1").style.display = "block";
+document.querySelector(".signup1").style.background = "none";
+document.querySelector(".login1").style.background = "#fff";
+});
+
+document.querySelector(".signup1").addEventListener("click", function() {
+document.querySelector(".signup-form1").style.display = "block";
+document.querySelector(".login-form1").style.display = "none";
+document.querySelector(".login1").style.background = "none";
+document.querySelector(".signup1").style.background = "#fff";
+});
+
+var buttons = document.querySelectorAll(".btn1");
+buttons.forEach(function(button) {
+button.addEventListener("click", function () {
+var inputs = document.querySelectorAll(".input1");
+inputs.forEach(function (input) {
+input.value = "";
+});
+});
+});
+</script>
  
-<div class="wrapper">
-<div class="container">
-
-    <div class="signup">Sign Up</div>
-    <div class="login">Log In</div>
-
-    <div class="signup-form">
-        <input type="text" placeholder="Your Email Address" class="input"><br />
-        <input type="text" placeholder="Choose a Username" class="input"><br />
-        <input type="password" placeholder="Choose a Password" class="input"><br />
-        <div class="btn">Create account</div>
-    </div>
-
-    <div class="login-form">
-        <input type="text" placeholder="Email or Username" class="input"><br />
-        <input type="password" placeholder="Password" class="input"><br />
-        <div class="btn">log in</div>
-        <span><a href="#">I forgot my username or password.</a></span>
-    </div>
-
-</div>
-</div>
-      <script>
-      // Get the DOM element with class "login-form" and hide it
-      var loginForm = document.querySelector(".login-form");
-      loginForm.style.display = "none";
-      
-      // Get the DOM element with class "login" and remove its background
-      var loginButton = document.querySelector(".login");
-      loginButton.style.background = "none";
-      
-      // Handle click event on login button
-      loginButton.addEventListener("click", function() {
-        // Get the DOM element with class "signup-form" and hide it
-        var signupForm = document.querySelector(".signup-form");
-        signupForm.style.display = "none";
-        
-        // Show the login form
-        loginForm.style.display = "block";
-        
-        // Get the DOM element with class "signup" and remove its background
-        var signupButton = document.querySelector(".signup");
-        signupButton.style.background = "none";
-        
-        // Add background to login button
-        loginButton.style.background = "#fff";
-      });
-      
-      // Get the DOM element with class "signup" and handle click event
-      var signupButton = document.querySelector(".signup");
-      signupButton.addEventListener("click", function() {
-        // Get the DOM element with class "signup-form" and show it
-        var signupForm = document.querySelector(".signup-form");
-        signupForm.style.display = "block";
-        
-        // Get the DOM element with class "login-form" and hide it
-        loginForm.style.display = "none";
-        
-        // Get the DOM element with class "login" and remove its background
-        loginButton.style.background = "none";
-        
-        // Add background to signup button
-        signupButton.style.background = "#fff";
-      });
-      
-      // Get all DOM elements with class "btn" and handle click event
-      var buttons = document.querySelectorAll(".btn");
-      buttons.forEach(function(button) {
-        button.addEventListener("click", function() {
-          // Get all DOM elements with class "input" and clear their values
-          var inputs = document.querySelectorAll(".input");
-          inputs.forEach(function(input) {
-            input.value = "";
-          });
-        });
-      });
-      </script>
 </div>
 </section>
-
 `
 });
 

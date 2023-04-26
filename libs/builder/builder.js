@@ -2516,23 +2516,29 @@ Vvveb.SectionList = {
 
 
 		var self = this;
-		$("#sections .sections-list").on("click", " .add-section-btn", function (e) {
+		$("#sections .sections-list").on("click", ".add-section-btn", function (e) {
+			// console.log(e);
 			var section = Vvveb.Sections.get(this.parentNode.dataset.type);
 			var node = $(section.html);
 			var sectionType = node[0].tagName.toLowerCase();
 			var afterSection = $(sectionType + ":last", Vvveb.Builder.frameBody);
 
 			try {
-				const iframe1 = document.getElementById('iframe1');
+				const iframe1 = document.getElementById('iframe1');  //all html tag
+				// console.log(iframe1);
 				let iframeDoc = iframe1.contentDocument || iframe1.contentWindow.document; // get the document object of the iframe
+				// console.log(iframeDoc);  //get the #document part
 				let iframeHtml = $(iframeDoc).find('html').html(); // get the HTML content of the iframe
-				//console.log(iframeHtml); // outputs the HTML content of the iframe
+				// console.log(iframeHtml); // outputs the HTML content of the iframe
+
 				let nodeHtml = node.html();
+				console.log(nodeHtml);
 
 				const scriptTag = node.find('script')[0].outerHTML;
-				//console.log(scriptTag);
+				console.log(scriptTag);
 
 				const scriptTagInDocument = $(iframeHtml).find('script').filter(function () {
+
 					return $(this).html() === $(scriptTag).html();
 				})[0];
 
@@ -2540,6 +2546,7 @@ Vvveb.SectionList = {
 					//console.log('Script tag is present in the iframe HTML');
 					node.find('script').remove();
 				} else {
+					console.log(scriptTagInDocument);
 					console.log('Script tag is not present in the iframe HTML');
 					$(iframeHtml).find('body').append(scriptTag);
 				}
@@ -2548,11 +2555,12 @@ Vvveb.SectionList = {
 			}
 
 
-			console.log(node.html());
+			// console.log(node.html());
 
 			if (afterSection.length) {
 				afterSection.after(node);
-			} else {
+			}
+			else {
 				if (sectionType != "footer") {
 					afterSection = $("footer:first", Vvveb.Builder.frameBody);
 
