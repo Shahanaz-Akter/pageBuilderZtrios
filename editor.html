@@ -18,6 +18,10 @@
 <body>
 
 	<div id="vvveb-builder">
+
+
+
+		<!-- navbar part start-->
 		<div id="top-panel">
 			<img src="img/logo.png" alt="Vvveb" class="float-start" id="logo">
 
@@ -93,7 +97,8 @@
 			</div>
 
 
-			<div class="float-end me-3">
+
+			<div class="float-end me-3" style="background: gray;">
 
 				<button class="btn btn-light border-0 btn-sm btn-dark-mode" data-vvveb-action="darkMode">
 					<!-- i class="la la-adjust la-lg"></i -->
@@ -127,9 +132,13 @@
 			</div>
 
 		</div>
+		<!-- navbar part end-->
 
 
-		<div id="left-panel">
+
+
+		<!-- left top but under the nav part start-->
+		<div id="left-panel" style="border: 2px solid red;">
 
 			<div id="filemanager">
 				<div class="header">
@@ -153,6 +162,7 @@
 					<ol>
 					</ol>
 				</div>
+
 			</div>
 
 
@@ -525,7 +535,7 @@
 
 			</div>
 		</div>
-
+		<!-- left top but under the nav part end-->
 
 		<div id="canvas">
 			<div id="iframe-wrapper">
@@ -1848,6 +1858,7 @@ Unzip the latest ckeditor release zip from https://github.com/ckeditor/ckeditor4
 			$(function () {
 
 				let firstPage = Object.keys(pages)[0];
+				
 				Vvveb.Builder.init(pages[firstPage]["url"], function () {
 					//load code after page is loaded here
 				});
