@@ -3,7 +3,7 @@ Vvveb.SectionsGroup['Form Section'] = ["bootstrap4/form_1", "bootstrap4/form_2",
 Vvveb.Sections.add("bootstrap4/form_1", {
   name: "Form1 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/form_1.PNG",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/form_1.PNG",
   html: `
 
 <section class="form_1">
@@ -169,18 +169,12 @@ Vvveb.Sections.add("bootstrap4/form_1", {
 `
 });
 
-
-
-
 Vvveb.Sections.add("bootstrap4/form_2", {
   name: "Form2 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/form_2.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/form_2.png",
   html: `
 
-
-
-  
  <style>
  
  .form2 input, button {
@@ -571,7 +565,7 @@ Vvveb.Sections.add("bootstrap4/form_2", {
 Vvveb.Sections.add("bootstrap4/form_3", {
   name: "Form3 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/form_3.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/form_3.png",
   html: `
 
 <section>
@@ -764,7 +758,7 @@ Vvveb.Sections.add("bootstrap4/form_3", {
 Vvveb.Sections.add("bootstrap4/form_4", {
   name: "Form4 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/form_4.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/form_4.png",
   html: `
 
 
@@ -1045,7 +1039,7 @@ secondForm.addEventListener("submit", (e) => e.preventDefault());
 Vvveb.Sections.add("bootstrap4/form_5", {
   name: "Form5 Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/5.jpg",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/5.jpg",
   html: `
 <style>
 

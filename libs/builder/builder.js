@@ -785,23 +785,30 @@ Vvveb.Builder = {
 		});
 	},
 
+
+
+
+	// In this function section will be added as li tag
 	loadSectionGroups: function () {
 
 		var sectionsList = $(".sections-list");
-		console.log(sectionsList);
+
+		// console.log(sectionsList);
+
 		sectionsList.empty();
+
 		var item = {};
 
 		sectionsList.each(function () {
 
 			var list = $(this);
 			var type = this.dataset.type;
-			console.log(list);
-			// console.log(type);
-
 
 			for (group in Vvveb.SectionsGroup) {
-				console.log(group);
+
+
+				//section components
+				// console.log(Vvveb.SectionsGroup);
 
 				list.append(
 					`<li class="header" data-section="${group}"  data-search="">
@@ -821,10 +828,14 @@ Vvveb.Builder = {
 				for (i in sections) {
 					sectionType = sections[i];
 					section = Vvveb.Sections.get(sectionType);
+					//individual all sections
+					// console.log(section);
 
 					if (section) {
-						item = $(`<li data-section="${group}" data-type="${sectionType}" data-search="${section.name.toLowerCase()}">
-									<a class="name" href="#">${section.name}</a>
+
+						// console.log(section.name.toUpperCase());
+						item = $(`<li data-section="${group}" data-type="${sectionType}" data-search="${section.name.toUpperCase()}">
+									<a class="name" href="#">${section.name.toUpperCase()}</a>
 									<a class="add-section-btn" href="" title="Add section"><i class="la la-plus"></i></a>
 									<img class="preview" src="" loading="lazy">
 								</li>`);
@@ -847,6 +858,16 @@ Vvveb.Builder = {
 			}
 		});
 	},
+
+
+
+
+
+
+
+
+
+
 
 	loadBlockGroups: function () {
 
@@ -1150,6 +1171,7 @@ Vvveb.Builder = {
 
 	selectNode: function (node) {
 		var self = this;
+
 
 		if (!node) {
 			$("#select-box").hide();
@@ -1530,6 +1552,24 @@ Vvveb.Builder = {
 			return false;
 		});
 
+
+		//for replace section
+		$("#replace-btn").on("click", function (dataa) {
+
+			console.log(dataa);
+
+			var frame_html_code = window.FrameDocument;
+			console.log(frame_html_code);
+
+
+
+
+			var news_2 = frame_html_code.body.querySelector('.f6');
+			console.log(news_2);
+
+		});
+
+
 		$("#delete-btn").on("click", function (event) {
 			$("#select-box").hide();
 
@@ -1547,6 +1587,7 @@ Vvveb.Builder = {
 			event.preventDefault();
 			return false;
 		});
+
 
 		var addSectionBox = $("#add-section-box");
 		var addSectionElement = {};
@@ -2517,7 +2558,10 @@ Vvveb.SectionList = {
 
 		var self = this;
 		$("#sections .sections-list").on("click", ".add-section-btn", function (e) {
-			// console.log(e);
+			console.log('mimi is here');
+			console.log(window.FrameDocument.body.querySelector('.news_1'));
+
+
 			var section = Vvveb.Sections.get(this.parentNode.dataset.type);
 			var node = $(section.html);
 			var sectionType = node[0].tagName.toLowerCase();

@@ -7,7 +7,7 @@ Vvveb.SectionsGroup['Hero_Section'] = ["bootstrap4/hero_sec_1", "bootstrap4/hero
 Vvveb.Sections.add("bootstrap4/hero_sec_1", {
   name: "Portfolio Demo",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/3.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/3.PNG",
   html: `
       <section class="sec_2" data-name="sec_2">
     <div>
@@ -192,9 +192,9 @@ Vvveb.Sections.add("bootstrap4/hero_sec_1", {
 Vvveb.Sections.add("bootstrap4/hero_sec_2", {
   name: "Tech World of Life",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/1.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/1.png",
   html: `
-    <section class="__intro_1" data-name="intro1">
+    <section class="__section_img_1" data-name="section_img1">
     <div class="hero">
     <navbar>
       <img src="https://i.ibb.co/g36x52Y/logo.png" class="logo">
@@ -231,7 +231,7 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
     <style>
     
     
-    .__intro_1 .hero {
+    .__section_img_1 .hero {
         width: 100%;
         height: 100vh;
         background-image: url(https://i.ibb.co/vH8dJYK/background.png);
@@ -240,11 +240,11 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         position: relative;
         overflow: hidden;
       }
-      .__intro_1 .logo,
+      .__section_img_1 .logo,
       button {
         cursor: pointer;  
       }
-      .__intro_1 navbar {
+      .__section_img_1 navbar {
         width: 85%;
         height: 15%;
         margin: auto;
@@ -252,10 +252,10 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         align-items: center;
         justify-content: space-between;
       }
-      .__intro_1 .logo {
+      .__section_img_1 .logo {
         width: 100px;
       }
-      .__intro_1  button {
+      .__section_img_1  button {
         color: #fff;
         padding: 10px 25px;
         background: transparent;
@@ -263,7 +263,7 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         border-radius: 20px;
         outline: pointer;
       }
-      .__intro_1 .content {
+      .__section_img_1 .content {
         color: #fbfcfd;
         position: absolute;
         top: 50%;
@@ -271,12 +271,12 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         transform: translateY(-50%);
         z-index: 2;
       }
-      .__intro_1 h1 {
+      .__section_img_1 h1 {
         font-size: 80px;
         margin: 10px 0 30px;
         line-height: 80px;
       }
-      .__intro_1 .side-bar {
+      .__section_img_1 .side-bar {
         width: 50px;
         height: 100vh;
         background: linear-gradient(#00545d, #000729);
@@ -284,38 +284,38 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         right: 0;
         top: 0;
       }
-      .__intro_1 .menu {
+      .__section_img_1 .menu {
         display: block;
         width: 25px;
         margin: 40px auto 0;
         cursor: pointer;
       }
-      .__intro_1 .social-links img,
-      .__intro_1 .useful-links img {
+      .__section_img_1 .social-links img,
+      .__section_img_1 .useful-links img {
         width: 25px;
         margin: 5px auto;
         cursor: pointer;
       }
-      .__intro_1 .social-links{
+      .__section_img_1 .social-links{
         width: 50px;
         text-align: center;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
       }
-      .__intro_1 .useful-links{
+      .__section_img_1 .useful-links{
         width: 50px;
         text-align: center;
         position: absolute;
         bottom: 30px;
         transform: translateY(-50%);
       }
-      .__intro_1 .bubbles img {
+      .__section_img_1 .bubbles img {
         width: 50px;
         animation: bubble 7s linear infinite;
         opacity: 0;
       }
-      .__intro_1  .bubbles {
+      .__section_img_1  .bubbles {
         width: 100%;
         display: flex;
         align-items: center;
@@ -340,29 +340,29 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
         }
       )
       
-      .__intro_1 .bubbles img:nth-child(1) {
+      .__section_img_1 .bubbles img:nth-child(1) {
         animation-delay: 2s;
       }
-      .__intro_1 .bubbles img:nth-child(2) {
+      .__section_img_1 .bubbles img:nth-child(2) {
         animation-delay: 1s;
       }
-      .__intro_1  .bubbles img:nth-child(3) {
+      .__section_img_1  .bubbles img:nth-child(3) {
         animation-delay: 4s;
       }
-      .__intro_1  .bubbles img:nth-child(4) {
+      .__section_img_1  .bubbles img:nth-child(4) {
         animation-delay: 5s;
       }
-      .__intro_1 .bubbles img:nth-child(5) {
+      .__section_img_1 .bubbles img:nth-child(5) {
         animation-delay: 6s;
       }
-      .__intro_1  .bubbles img:nth-child(6) {
+      .__section_img_1  .bubbles img:nth-child(6) {
         animation-delay: 7s;
       }
-      .__intro_1 .bubbles img:nth-child(7) {
+      .__section_img_1 .bubbles img:nth-child(7) {
         animation-delay: 8s;
       }
     </style>
-    <script id= "__intro_1_script"></script>
+    <script id= "__section_img_1_script"></script>
   </div>
     </section>
 
@@ -374,7 +374,7 @@ Vvveb.Sections.add("bootstrap4/hero_sec_2", {
 Vvveb.Sections.add("bootstrap4/hero_sec_3", {
   name: "Where Dreams Come True",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/4.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/4.png",
   html: `
 
 <section class="sec_3">
@@ -475,7 +475,7 @@ Vvveb.Sections.add("bootstrap4/hero_sec_3", {
 Vvveb.Sections.add("bootstrap4/hero_sec_4", {
   name: "Take Care of Your Health",
   dragHtml: '<img src="' + Vvveb.baseUrl + 'icons/image.svg">',
-  image: "http://localhost/PageBuilderZtrios/img/intro/2.png",
+  image: "http://localhost/PageBuilderZtrios/img/section_img/2.png",
   html: `
     <section class="sec_4" data-name="sec_4">
         <div class="hero">
