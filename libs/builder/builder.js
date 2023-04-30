@@ -1561,9 +1561,6 @@ Vvveb.Builder = {
 			var frame_html_code = window.FrameDocument;
 			console.log(frame_html_code);
 
-
-
-
 			var news_2 = frame_html_code.body.querySelector('.f6');
 			console.log(news_2);
 
