@@ -2757,41 +2757,41 @@ Vvveb.FileManager = {
 	init: function (allowedComponents = {}) {
 
 		this.allowedComponents = allowedComponents;
-		this.tree = $("#filemanager .tree > ol").html("");
+		this = $("#filemanager  > ol").html("");
 
-		$(this.tree).on("click", "a", function (e) {
+		$(this).on("click", "a", function (e) {
 			e.preventDefault();
 			return false;
 		});
 
-		$(this.tree).on("click", ".delete", function (e) {
+		$(this).on("click", ".delete", function (e) {
 			let element = $(e.target).closest("li");
 			Vvveb.FileManager.deletePage(element, e);
 			e.preventDefault();
 			return false;
 		});
 
-		$(this.tree).on("click", ".rename", function (e) {
+		$(this).on("click", ".rename", function (e) {
 			let element = $(e.target).closest("li");
 			Vvveb.FileManager.renamePage(element, e, false);
 			e.preventDefault();
 			return false;
 		});
 
-		$(this.tree).on("click", ".duplicate", function (e) {
+		$(this).on("click", ".duplicate", function (e) {
 			let element = $(e.target).closest("li");
 			Vvveb.FileManager.renamePage(element, e, true);
 			e.preventDefault();
 			return false;
 		});
 
-		$(this.tree).on("click", "li[data-page] label", function (e) {
+		$(this).on("click", "li[data-page] label", function (e) {
 			var page = $(this.parentNode).data("page");
 			if (page) Vvveb.FileManager.loadPage(page, allowedComponents);
 			return false;
 		})
 
-		$(this.tree).on("click", "li[data-component] label ", function (e) {
+		$(this).on("click", "li[data-component] label ", function (e) {
 			node = $(e.currentTarget.parentNode).data("node");
 
 			delay(
@@ -2893,12 +2893,12 @@ Vvveb.FileManager = {
 		this.pages[name] = data;
 		data['name'] = name;
 
-		var folder = this.tree;
+		var folder = this;
 		if (data.folder) {
-			if (!(folder = this.tree.find('li[data-folder="' + data.folder + '"]')).length) {
+			if (!(folder = this.find('li[data-folder="' + data.folder + '"]')).length) {
 				data.folderTitle = data.folder[0].toUpperCase() + data.folder.slice(1);
 				folder = $(tmpl("vvveb-filemanager-folder", data));
-				this.tree.append(folder);
+				this.append(folder);
 			}
 
 			folder = folder.find("> ol");
@@ -2915,7 +2915,7 @@ Vvveb.FileManager = {
 	},
 
 	addComponent: function (name, url, title, page) {
-		$("[data-page='" + page + "'] > ol", this.tree).append(
+		$("[data-page='" + page + "'] > ol", this).append(
 			tmpl("vvveb-filemanager-component", { name: name, url: url, title: title }));
 	},
 
@@ -2925,7 +2925,7 @@ Vvveb.FileManager = {
 		getNodeTree(window.FrameDocument.body, tree, allowedComponents);
 
 		var html = drawComponentsTree(tree);
-		$("[data-page='" + this.currentPage + "'] > ol", this.tree).replaceWith(html);
+		$("[data-page='" + this.currentPage + "'] > ol", this).replaceWith(html);
 	},
 
 	getCurrentUrl: function () {
@@ -2955,9 +2955,9 @@ Vvveb.FileManager = {
 	},
 
 	loadPage: function (name, allowedComponents = false, disableCache = true, loadComponents = false) {
-		let page = $("[data-page='" + name + "']", this.tree);
+		let page = $("[data-page='" + name + "']", this);
 		//remove active from current active page
-		$("[data-page]", this.tree).removeClass("active");
+		$("[data-page]", this).removeClass("active");
 		//set loaded page as active
 		page.addClass("active");
 		//open parent folder if closed
@@ -2976,7 +2976,7 @@ Vvveb.FileManager = {
 	},
 
 	scrollBottom: function () {
-		var scroll = this.tree.parent();
+		var scroll = this.parent();
 		scroll.scrollTop(scroll.prop("scrollHeight"));
 	},
 }
@@ -2985,9 +2985,9 @@ Vvveb.Breadcrumb = {
 	tree: false,
 
 	init: function () {
-		this.tree = $(".breadcrumb-navigator > .breadcrumb").html("");
+		this = $(".breadcrumb-navigator > .breadcrumb").html("");
 
-		$(this.tree).on("click", ".breadcrumb-item", function (e) {
+		$(this).on("click", ".breadcrumb-item", function (e) {
 			let node = $(this).data("node");
 			if (node) {
 				node.click();
@@ -3022,11 +3022,11 @@ Vvveb.Breadcrumb = {
 	addElement: function (data, element) {
 		var li = $(tmpl("vvveb-breadcrumb-navigaton-item", data));
 		li.data("node", element);
-		$(this.tree).prepend(li);
+		$(this).prepend(li);
 	},
 
 	loadBreadcrumb: function (element) {
-		this.tree.html("");
+		this.html("");
 		var currentElement = element;
 
 		while (currentElement.parentElement) {
